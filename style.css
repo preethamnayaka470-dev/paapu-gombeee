@@ -1,0 +1,648 @@
+/* ==========================================
+   PAAPU ❤️ GOMBEEEE
+   PREMIUM BIRTHDAY WEBSITE
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(135deg,#070b2d,#111827,#1d2671);
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* Loader */
+
+#loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#05051a;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+z-index:99999;
+
+}
+
+#loader h1{
+
+font-size:80px;
+
+animation:pulse 1s infinite;
+
+}
+
+#loader h2{
+
+margin-top:20px;
+
+font-size:30px;
+
+font-family:"Great Vibes",cursive;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* Login */
+
+#loginPage{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+}
+
+.glass{
+
+width:420px;
+
+max-width:95%;
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.2);
+
+text-align:center;
+
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.glass h2{
+
+font-family:"Great Vibes",cursive;
+
+font-size:45px;
+
+margin:15px 0;
+
+color:#ffb7d8;
+
+}
+
+.glass input{
+
+width:100%;
+
+padding:15px;
+
+margin-top:20px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+font-size:17px;
+
+}
+
+.glass button{
+
+margin-top:20px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4d94;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.glass button:hover{
+
+background:#ff2678;
+
+transform:translateY(-3px);
+
+}
+
+#error{
+
+margin-top:15px;
+
+color:#ff8585;
+
+font-weight:600;
+
+}
+
+.hint{
+
+margin-top:25px;
+
+color:#ffe6ef;
+
+}
+
+/* Hide Website */
+
+#website{
+
+display:none;
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+}
+
+.hero h2{
+
+font-size:90px;
+
+font-family:"Great Vibes",cursive;
+
+color:#ff9fcf;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+max-width:700px;
+
+margin-top:20px;
+
+line-height:1.8;
+
+opacity:.9;
+
+}
+
+.hero button{
+
+margin-top:40px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:20px;
+
+background:#ff4d94;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.hero button:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* Countdown */
+
+.countdown{
+
+padding:100px 20px;
+
+text-align:center;
+
+}
+
+.countdown h2{
+
+font-size:45px;
+
+margin-bottom:50px;
+
+}
+
+.timer{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.timer div{
+
+width:150px;
+
+padding:25px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+}
+
+.timer h1{
+
+font-size:60px;
+
+color:#ffb3d5;
+
+}
+
+.timer p{
+
+margin-top:10px;
+
+font-size:18px;
+
+}
+
+/* Story */
+
+.story{
+
+padding:120px 20px;
+
+text-align:center;
+
+}
+
+.story h1{
+
+font-size:60px;
+
+font-family:"Great Vibes",cursive;
+
+margin-bottom:25px;
+
+color:#ffb5d7;
+
+}
+
+.story p{
+
+max-width:800px;
+
+margin:auto;
+
+font-size:22px;
+
+line-height:2;
+
+}
+/* ===========================
+   GALLERY
+=========================== */
+
+#gallery{
+padding:100px 20px;
+text-align:center;
+}
+
+#gallery h1{
+font-size:60px;
+font-family:"Great Vibes",cursive;
+color:#ffb3d6;
+margin-bottom:50px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1300px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+box-shadow:0 15px 40px rgba(255,120,170,.5);
+}
+
+/* ===========================
+   LOVE LETTER
+=========================== */
+
+#letter{
+padding:120px 20px;
+text-align:center;
+}
+
+#letter h1{
+font-size:55px;
+font-family:"Great Vibes",cursive;
+margin-bottom:40px;
+color:#ffb7d8;
+}
+
+.letter-box{
+max-width:850px;
+margin:auto;
+padding:40px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+border-radius:25px;
+line-height:2;
+font-size:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+/* ===========================
+   MUSIC
+=========================== */
+
+#music{
+padding:100px 20px;
+text-align:center;
+}
+
+#music h1{
+font-size:55px;
+font-family:"Great Vibes",cursive;
+margin-bottom:20px;
+}
+
+#music button{
+margin-top:30px;
+padding:18px 45px;
+border:none;
+border-radius:40px;
+background:#ff4d94;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+#music button:hover{
+background:#ff2678;
+}
+
+/* ===========================
+   GIFT
+=========================== */
+
+#gift{
+padding:120px 20px;
+text-align:center;
+}
+
+#gift h1{
+font-size:55px;
+font-family:"Great Vibes",cursive;
+margin-bottom:20px;
+}
+
+#giftButton{
+padding:20px 55px;
+font-size:22px;
+border:none;
+border-radius:50px;
+background:#ff4d94;
+color:white;
+cursor:pointer;
+transition:.4s;
+}
+
+#giftButton:hover{
+transform:scale(1.08);
+}
+
+#giftMessage{
+display:none;
+margin-top:50px;
+padding:35px;
+border-radius:20px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+animation:popup .7s;
+}
+
+@keyframes popup{
+0%{
+opacity:0;
+transform:scale(.5);
+}
+100%{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* ===========================
+   FINAL
+=========================== */
+
+#final{
+padding:150px 20px;
+text-align:center;
+}
+
+#final h1{
+font-size:70px;
+font-family:"Great Vibes",cursive;
+color:#ffb3d6;
+}
+
+#final h2{
+font-size:45px;
+margin-top:20px;
+}
+
+#final h3{
+margin-top:50px;
+font-family:"Great Vibes",cursive;
+font-size:42px;
+color:#ffd6e7;
+}
+
+#final p{
+margin:auto;
+max-width:850px;
+font-size:22px;
+line-height:2;
+margin-top:30px;
+}
+
+/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:25px;
+pointer-events:none;
+animation:floatUp 8s linear forwards;
+z-index:999;
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+/* ===========================
+   FIREWORKS
+=========================== */
+
+#fireworks{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:998;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:58px;
+}
+
+.story h1,
+#gallery h1,
+#letter h1,
+#music h1,
+#gift h1,
+#final h1{
+font-size:42px;
+}
+
+.timer div{
+width:120px;
+}
+
+.timer h1{
+font-size:42px;
+}
+
+.letter-box{
+padding:25px;
+font-size:17px;
+}
+
+.gallery img{
+height:250px;
+}
+
+#giftButton{
+font-size:18px;
+padding:15px 35px;
+}
+
+}
